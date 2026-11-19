@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillSync AI – Smart Placement Preparation System</title>
+  <meta name="description" content="AI-powered system that analyzes your skills, identifies gaps, recommends companies, and builds a personalized roadmap for campus placement success." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== LANDING PAGE ===== -->
+  <div id="page-landing" class="page active">
+    <nav class="navbar">
+      <div class="nav-logo">
+        <div class="logo-icon">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <circle cx="14" cy="14" r="12" stroke="url(#grad1)" stroke-width="2"/>
+            <path d="M8 14 L12 10 L16 16 L20 12" stroke="url(#grad1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#7c3aed"/><stop offset="100%" style="stop-color:#06b6d4"/></linearGradient></defs>
+          </svg>
+        </div>
+        <span class="logo-text">SkillSync <span class="logo-ai">AI</span></span>
+      </div>
+      <div class="nav-links">
+        <a href="#features" class="nav-link">Features</a>
+        <a href="#how-it-works" class="nav-link">How It Works</a>
+        <div id="nav-auth-section" class="nav-auth-section">
+          <button class="btn-nav-login" id="nav-btn-login">Log In</button>
+          <button class="btn-nav-cta" id="nav-get-started">Get Started</button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-bg">
+        <div class="hero-orb orb-1"></div>
+        <div class="hero-orb orb-2"></div>
+        <div class="hero-orb orb-3"></div>
+        <div class="grid-overlay"></div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          AI-Powered Placement Intelligence
+        </div>
+        <h1 class="hero-title">
+          Know Your Gaps.<br/>
+          Land Your Dream Job.
+        </h1>
+        <p class="hero-subtitle">
+          SkillSync AI analyzes your skills, identifies exactly what's missing, 
+          matches you with the right companies, and builds a personalized week-by-week 
+          preparation roadmap.
+        </p>
+        <div class="hero-actions">
+          <button class="btn-primary" id="hero-get-started">
+            <span>Analyze My Profile</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num">50+</span>
+            <span class="stat-label">Company Profiles</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">200+</span>
+            <span class="stat-label">Skills Tracked</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">AI</span>
+            <span class="stat-label">Powered Roadmaps</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card main-card">
+          <div class="card-header-sm">
+            <div class="pulse-dot"></div>
+            <span>Live Analysis</span>
+          </div>
+          <div class="match-display">
+            <svg class="match-ring" viewBox="0 0 120 120">
+              <circle cx="60" cy="60" r="50" fill="none" stroke="rgba(124,58,237,0.15)" stroke-width="10"/>
+              <circle cx="60" cy="60" r="50" fill="none" stroke="url(#ringGrad)" stroke-width="10"
+                stroke-dasharray="314" stroke-dashoffset="80" stroke-linecap="round" transform="rotate(-90 60 60)"/>
+              <defs><linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#7c3aed"/><stop offset="100%" stop-color="#06b6d4"/></linearGradient></defs>
+            </svg>
+            <div class="match-text">
+              <span class="match-pct">74%</span>
+              <span class="match-lbl">Match Score</span>
+            </div>
+          </div>
+          <div class="company-tags">
+            <span class="company-chip google">Google</span>
+            <span class="company-chip microsoft">Microsoft</span>
+            <span class="company-chip amazon">Amazon</span>
+          </div>
+        </div>
+        <div class="hero-card side-card card-top">
+          <div class="mini-label">Top Skill Gap</div>
+          <div class="skill-gap-item">
+            <span class="gap-name">System Design</span>
+            <div class="gap-bar"><div class="gap-fill" style="width:35%"></div></div>
+            <span class="gap-pct">35%</span>
+          </div>
+          <div class="skill-gap-item">
+            <span class="gap-name">DSA</span>
+            <div class="gap-bar"><div class="gap-fill dsa" style="width:68%"></div></div>
+            <span class="gap-pct">68%</span>
+          </div>
+        </div>
+        <div class="hero-card side-card card-bottom">
+          <div class="mini-label">Next Milestone</div>
+          <div class="milestone-item">
+            <div class="milestone-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+            </div>
+            <div class="milestone-info">
+              <span class="milestone-title">Complete 50 LeetCode Problems</span>
+              <span class="milestone-due">Due in 7 days</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section" id="features">
+      <div class="section-header">
+        <div class="section-tag">Core Features</div>
+        <h2 class="section-title">Everything You Need to Get Placed</h2>
+        <p class="section-subtitle">From profile analysis to offer letter — SkillSync AI has you covered at every step</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card" data-index="0">
+          <div class="feature-icon" style="--c1:#7c3aed;--c2:#a855f7">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 3L3 8v6c0 5.5 4.7 10.7 11 12 6.3-1.3 11-6.5 11-12V8L14 3z" stroke="url(#fi0)" stroke-width="1.8" stroke-linejoin="round"/><path d="M10 14l3 3 5-5" stroke="url(#fi0)" stroke-width="1.8" stroke-linecap="round"/><defs><linearGradient id="fi0" x1="0" y1="0" x2="28" y2="28"><stop stop-color="#7c3aed"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs></svg>
+          </div>
+          <h3 class="feature-title">Smart Profile Analysis</h3>
+          <p class="feature-desc">AI deeply analyzes your skills, projects, education, and experience to create a comprehensive student profile score.</p>
+          <div class="feature-tag">Profile Scoring</div>
+        </div>
+        <div class="feature-card" data-index="1">
+          <div class="feature-icon" style="--c1:#0891b2;--c2:#06b6d4">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="10" stroke="url(#fi1)" stroke-width="1.8"/><path d="M14 9v5l3 3" stroke="url(#fi1)" stroke-width="1.8" stroke-linecap="round"/><defs><linearGradient id="fi1" x1="0" y1="0" x2="28" y2="28"><stop stop-color="#0891b2"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs></svg>
+          </div>
+          <h3 class="feature-title">Skill Gap Detection</h3>
+          <p class="feature-desc">Precisely identify what skills you're missing for your target companies and roles with detailed gap analysis reports.</p>
+          <div class="feature-tag">Gap Analysis</div>
+        </div>
+        <div class="feature-card" data-index="2">
+          <div class="feature-icon" style="--c1:#d97706;--c2:#f59e0b">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="4" y="4" width="20" height="20" rx="3" stroke="url(#fi2)" stroke-width="1.8"/><path d="M9 14h10M9 10h6M9 18h8" stroke="url(#fi2)" stroke-width="1.8" stroke-linecap="round"/><defs><linearGradient id="fi2" x1="0" y1="0" x2="28" y2="28"><stop stop-color="#d97706"/><stop offset="1" stop-color="#f59e0b"/></linearGradient></defs></svg>
+          </div>
+          <h3 class="feature-title">Company Matching</h3>
+          <p class="feature-desc">Get ranked company recommendations with match scores based on your profile against real hiring requirements.</p>
+          <div class="feature-tag">Smart Matching</div>
+        </div>
+        <div class="feature-card" data-index="3">
+          <div class="feature-icon" style="--c1:#059669;--c2:#10b981">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M5 24V14M10 24V10M15 24V16M20 24V6" stroke="url(#fi3)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="fi3" x1="0" y1="0" x2="28" y2="28"><stop stop-color="#059669"/><stop offset="1" stop-color="#10b981"/></linearGradient></defs></svg>
+          </div>
+          <h3 class="feature-title">Personalized Roadmap</h3>
+          <p class="feature-desc">Receive a week-by-week AI-generated study plan tailored to your timeline, target companies, and current skill level.</p>
+          <div class="feature-tag">AI Roadmap</div>
+        </div>
+        <div class="feature-card" data-index="4">
+          <div class="feature-icon" style="--c1:#db2777;--c2:#ec4899">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M14 4C8.5 4 4 8.5 4 14s4.5 10 10 10 10-4.5 10-10" stroke="url(#fi4)" stroke-width="1.8" stroke-linecap="round"/><path d="M18 4l6 6-6 6" stroke="url(#fi4)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><defs><linearGradient id="fi4" x1="0" y1="0" x2="28" y2="28"><stop stop-color="#db2777"/><stop offset="1" stop-color="#ec4899"/></linearGradient></defs></svg>
+          </div>
+          <h3 class="feature-title">Resource Curation</h3>
+          <p class="feature-desc">Get curated learning resources — courses, books, and practice problems — specifically chosen for your skill gaps.</p>
+          <div class="feature-tag">Learning Resources</div>
+        </div>
+        <div class="feature-card" data-index="5">
+          <div class="feature-icon" style="--c1:#7c3aed;--c2:#06b6d4">
+            <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M5 8h18M5 14h12M5 20h15" stroke="url(#fi5)" stroke-width="1.8" stroke-linecap="round"/><circle cx="22" cy="20" r="3" stroke="url(#fi5)" stroke-width="1.8"/><defs><linearGradient id="fi5" x1="0" y1="0" x2="28" y2="28"><stop stop-color="#7c3aed"/><stop offset="1" stop-color="#06b6d4"/></linearGradient></defs></svg>
+          </div>
+          <h3 class="feature-title">Progress Tracker</h3>
+          <p class="feature-desc">Track your preparation progress in real-time with visual dashboards, milestone completions, and readiness scores.</p>
+          <div class="feature-tag">Progress Analytics</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-section" id="how-it-works">
+      <div class="section-header">
+        <div class="section-tag">The Process</div>
+        <h2 class="section-title">From Profile to Placement in 4 Steps</h2>
+      </div>
+      <div class="steps-container">
+        <div class="step-card">
+          <div class="step-num">01</div>
+          <div class="step-content">
+            <h3>Build Your Profile</h3>
+            <p>Enter your education, skills, projects, internships, and target roles. Takes just 5 minutes.</p>
+          </div>
+        </div>
+        <div class="step-arrow">&#8594;</div>
+        <div class="step-card">
+          <div class="step-num">02</div>
+          <div class="step-content">
+            <h3>AI Analysis</h3>
+            <p>Your profile is analyzed locally against industry benchmarks and company-specific requirements.</p>
+          </div>
+        </div>
+        <div class="step-arrow">&#8594;</div>
+        <div class="step-card">
+          <div class="step-num">03</div>
+          <div class="step-content">
+            <h3>Get Matched</h3>
+            <p>Receive a ranked list of companies with match scores, gap reports, and role recommendations.</p>
+          </div>
+        </div>
+        <div class="step-arrow">&#8594;</div>
+        <div class="step-card">
+          <div class="step-num">04</div>
+          <div class="step-content">
+            <h3>Follow Roadmap</h3>
+            <p>Execute your personalized preparation plan with tracked milestones and resource links.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="cta-bg"></div>
+      <div class="cta-content">
+        <h2>Ready to Land Your Dream Job?</h2>
+        <p>Join students who are using AI to prepare smarter, not harder.</p>
+        <button class="btn-primary btn-large" id="cta-start">
+          Start Free Analysis
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 10h12M10 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-logo">SkillSync <span class="logo-ai">AI</span></div>
+      <p class="footer-text">AI-Powered Campus Placement Preparation &copy; 2025</p>
+    </footer>
+  </div>
+
+  <!-- ===== PROFILE PAGE ===== -->
+  <div id="page-profile" class="page">
+    <div class="app-header">
+      <div class="header-left">
+        <button class="back-btn" id="back-to-landing">
+          <svg width="18" height="18" viewBox="0 0 20 20" fill="none"><path d="M16 10H4M10 4l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Back
+        </button>
+        <div class="nav-logo">
+          <span class="logo-text">SkillSync <span class="logo-ai">AI</span></span>
+        </div>
+      </div>
+      <div class="header-right">
+        <button class="btn-demo-fill" id="btn-quick-fill" title="Auto-fill realistic student sample profile">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect></svg>
+          Autofill Sample Data
+        </button>
+        <div class="api-key-badge" id="api-status-badge">
+          <span class="status-dot"></span> <span id="api-status-text">Checking AI API...</span>
+        </div>
+        <div class="user-pill-wrap" id="profile-user-pill"></div>
+      </div>
+    </div>
+
+    <div class="profile-page">
+      <div class="profile-sidebar">
+        <div class="profile-steps">
+          <div class="ps-step active" data-step="1">
+            <div class="ps-num">1</div>
+            <div class="ps-info">
+              <span class="ps-title">Basic Info</span>
+              <span class="ps-sub">Education &amp; branch</span>
+            </div>
+          </div>
+          <div class="ps-connector"></div>
+          <div class="ps-step" data-step="2">
+            <div class="ps-num">2</div>
+            <div class="ps-info">
+              <span class="ps-title">Technical Skills</span>
+              <span class="ps-sub">Languages &amp; frameworks</span>
+            </div>
+          </div>
+          <div class="ps-connector"></div>
+          <div class="ps-step" data-step="3">
+            <div class="ps-num">3</div>
+            <div class="ps-info">
+              <span class="ps-title">Experience</span>
+              <span class="ps-sub">Projects &amp; internships</span>
+            </div>
+          </div>
+          <div class="ps-connector"></div>
+          <div class="ps-step" data-step="4">
+            <div class="ps-num">4</div>
+            <div class="ps-info">
+              <span class="ps-title">Preferences</span>
+              <span class="ps-sub">Target roles &amp; companies</span>
+            </div>
+          </div>
+        </div>
+        <div class="completion-box">
+          <div class="comp-label">Profile Complete</div>
+          <div class="comp-bar-wrap">
+            <div class="comp-bar" id="profile-comp-bar" style="width:0%"></div>
+          </div>
+          <div class="comp-pct" id="profile-comp-pct">0%</div>
+        </div>
+      </div>
+
+      <div class="profile-form-area">
+        <!-- Step 1: Basic Info -->
+        <div class="form-step active" id="step-1">
+          <div class="step-header">
+            <h2>Basic Information</h2>
+            <p>Tell us about your academic background</p>
+          </div>
+          <div class="form-grid">
+            <div class="form-group full">
+              <label for="student-name">Full Name</label>
+              <input type="text" id="student-name" placeholder="e.g., Rahul Sharma" />
+            </div>
+            <div class="form-group">
+              <label for="college">College / University</label>
+              <input type="text" id="college" placeholder="e.g., IIT Bombay" />
+            </div>
+            <div class="form-group">
+              <label for="branch">Branch / Major</label>
+              <select id="branch">
+                <option value="">Select Branch</option>
+                <option>Computer Science &amp; Engineering</option>
+                <option>Information Technology</option>
+                <option>Electronics &amp; Communication</option>
+                <option>Electrical Engineering</option>
+                <option>Mechanical Engineering</option>
+                <option>Civil Engineering</option>
+                <option>Data Science</option>
+                <option>AI &amp; Machine Learning</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="year">Current Year</label>
+              <select id="year">
+                <option value="">Select Year</option>
+                <option>1st Year</option>
+                <option>2nd Year</option>
+                <option>3rd Year</option>
+                <option>4th Year (Final)</option>
+                <option>Graduated</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="cgpa">CGPA / GPA</label>
+              <input type="number" id="cgpa" placeholder="e.g., 8.5" min="0" max="10" step="0.1" />
+            </div>
+            <div class="form-group">
+              <label for="graduation-year">Graduation Year</label>
+              <input type="number" id="graduation-year" placeholder="e.g., 2025" min="2024" max="2030" />
+            </div>
+            <div class="form-group">
+              <label for="backlogs">Active Backlogs</label>
+              <select id="backlogs">
+                <option value="0">None (0)</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3+</option>
+              </select>
+            </div>
+          </div>
+          <button class="btn-next" onclick="nextStep(2)">Continue to Skills &#8594;</button>
+        </div>
+
+        <!-- Step 2: Technical Skills -->
+        <div class="form-step" id="step-2">
+          <div class="step-header">
+            <h2>Technical Skills</h2>
+            <p>Select the technologies you're proficient in</p>
+          </div>
+          <div class="skills-section">
+            <div class="skill-category">
+              <h4>Programming Languages</h4>
+              <div class="skill-chips" id="chips-languages">
+                <span class="skill-chip" data-skill="C++">C++</span>
+                <span class="skill-chip" data-skill="Java">Java</span>
+                <span class="skill-chip" data-skill="Python">Python</span>
+                <span class="skill-chip" data-skill="JavaScript">JavaScript</span>
+                <span class="skill-chip" data-skill="TypeScript">TypeScript</span>
+                <span class="skill-chip" data-skill="Go">Go</span>
+                <span class="skill-chip" data-skill="Rust">Rust</span>
+                <span class="skill-chip" data-skill="C">C</span>
+                <span class="skill-chip" data-skill="Kotlin">Kotlin</span>
+                <span class="skill-chip" data-skill="Swift">Swift</span>
+                <span class="skill-chip" data-skill="R">R</span>
+                <span class="skill-chip" data-skill="Scala">Scala</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4>Web &amp; Frameworks</h4>
+              <div class="skill-chips" id="chips-web">
+                <span class="skill-chip" data-skill="React">React</span>
+                <span class="skill-chip" data-skill="Node.js">Node.js</span>
+                <span class="skill-chip" data-skill="Next.js">Next.js</span>
+                <span class="skill-chip" data-skill="Vue.js">Vue.js</span>
+                <span class="skill-chip" data-skill="Angular">Angular</span>
+                <span class="skill-chip" data-skill="Django">Django</span>
+                <span class="skill-chip" data-skill="Flask">Flask</span>
+                <span class="skill-chip" data-skill="Spring Boot">Spring Boot</span>
+                <span class="skill-chip" data-skill="Express.js">Express.js</span>
+                <span class="skill-chip" data-skill="FastAPI">FastAPI</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4>AI / Data Science</h4>
+              <div class="skill-chips" id="chips-ai">
+                <span class="skill-chip" data-skill="Machine Learning">Machine Learning</span>
+                <span class="skill-chip" data-skill="Deep Learning">Deep Learning</span>
+                <span class="skill-chip" data-skill="TensorFlow">TensorFlow</span>
+                <span class="skill-chip" data-skill="PyTorch">PyTorch</span>
+                <span class="skill-chip" data-skill="Scikit-learn">Scikit-learn</span>
+                <span class="skill-chip" data-skill="Data Analysis">Data Analysis</span>
+                <span class="skill-chip" data-skill="NLP">NLP</span>
+                <span class="skill-chip" data-skill="Computer Vision">Computer Vision</span>
+                <span class="skill-chip" data-skill="SQL">SQL</span>
+                <span class="skill-chip" data-skill="Pandas">Pandas</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4>DevOps &amp; Cloud</h4>
+              <div class="skill-chips" id="chips-devops">
+                <span class="skill-chip" data-skill="AWS">AWS</span>
+                <span class="skill-chip" data-skill="GCP">GCP</span>
+                <span class="skill-chip" data-skill="Azure">Azure</span>
+                <span class="skill-chip" data-skill="Docker">Docker</span>
+                <span class="skill-chip" data-skill="Kubernetes">Kubernetes</span>
+                <span class="skill-chip" data-skill="Git">Git</span>
+                <span class="skill-chip" data-skill="CI/CD">CI/CD</span>
+                <span class="skill-chip" data-skill="Linux">Linux</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h4>Core CS Concepts</h4>
+              <div class="skill-chips" id="chips-cs">
+                <span class="skill-chip" data-skill="Data Structures">Data Structures</span>
+                <span class="skill-chip" data-skill="Algorithms">Algorithms</span>
+                <span class="skill-chip" data-skill="System Design">System Design</span>
+                <span class="skill-chip" data-skill="Operating Systems">Operating Systems</span>
+                <span class="skill-chip" data-skill="DBMS">DBMS</span>
+                <span class="skill-chip" data-skill="Computer Networks">Computer Networks</span>
+                <span class="skill-chip" data-skill="OOP">OOP</span>
+                <span class="skill-chip" data-skill="Competitive Programming">Competitive Programming</span>
+              </div>
+            </div>
+          </div>
+          <div class="form-group full" style="margin-top:24px">
+            <label>DSA Proficiency Level</label>
+            <div class="rating-group" id="dsa-rating-group">
+              <button class="rating-btn" data-rating="1" onclick="setRating(1)">Beginner</button>
+              <button class="rating-btn" data-rating="2" onclick="setRating(2)">Basic</button>
+              <button class="rating-btn active" data-rating="3" onclick="setRating(3)">Intermediate</button>
+              <button class="rating-btn" data-rating="4" onclick="setRating(4)">Advanced</button>
+              <button class="rating-btn" data-rating="5" onclick="setRating(5)">Expert</button>
+            </div>
+          </div>
+          <div class="form-group full" style="margin-top:16px">
+            <label for="leetcode">LeetCode / Codeforces Problems Solved</label>
+            <input type="number" id="leetcode" placeholder="e.g., 150" min="0" />
+          </div>
+          <div class="btn-row">
+            <button class="btn-back-step" onclick="prevStep(1)">&#8592; Back</button>
+            <button class="btn-next" onclick="nextStep(3)">Continue to Experience &#8594;</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Experience -->
+        <div class="form-step" id="step-3">
+          <div class="step-header">
+            <h2>Experience &amp; Projects</h2>
+            <p>Tell us about your hands-on work</p>
+          </div>
+          <div class="form-group full">
+            <label for="internships">Internship Experience</label>
+            <select id="internships">
+              <option value="none">No internships yet</option>
+              <option value="1">1 internship</option>
+              <option value="2">2 internships</option>
+              <option value="3+">3+ internships</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label for="internship-desc">Describe Your Internships (if any)</label>
+            <textarea id="internship-desc" rows="3" placeholder="e.g., Software Engineering Intern at Infosys – worked on REST APIs using Spring Boot..."></textarea>
+          </div>
+          <div class="form-group full">
+            <label>Projects Completed</label>
+            <div class="rating-group" id="proj-rating-group">
+              <button class="proj-btn" data-proj="0" onclick="setProj(0)">0</button>
+              <button class="proj-btn active" data-proj="1-2" onclick="setProj('1-2')">1-2</button>
+              <button class="proj-btn" data-proj="3-5" onclick="setProj('3-5')">3-5</button>
+              <button class="proj-btn" data-proj="5+" onclick="setProj('5+')">5+</button>
+            </div>
+          </div>
+          <div class="form-group full">
+            <label for="projects-desc">Describe Your Best Projects</label>
+            <textarea id="projects-desc" rows="4" placeholder="e.g., Built an e-commerce platform using React + Node.js + MongoDB with payment integration. Achieved 2k+ users..."></textarea>
+          </div>
+          <div class="form-group full">
+            <label for="hackathons">Hackathons / Competitions</label>
+            <select id="hackathons">
+              <option value="none">None</option>
+              <option value="participated">Participated (no win)</option>
+              <option value="top3">Top 3 / Winner</option>
+              <option value="multiple">Multiple Wins</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label for="github">GitHub Profile URL (optional)</label>
+            <input type="url" id="github" placeholder="https://github.com/username" />
+          </div>
+          <div class="form-group full">
+            <label for="linkedin">LinkedIn Profile URL (optional)</label>
+            <input type="url" id="linkedin" placeholder="https://linkedin.com/in/username" />
+          </div>
+          <div class="btn-row">
+            <button class="btn-back-step" onclick="prevStep(2)">&#8592; Back</button>
+            <button class="btn-next" onclick="nextStep(4)">Continue to Preferences &#8594;</button>
+          </div>
+        </div>
+
+        <!-- Step 4: Preferences -->
+        <div class="form-step" id="step-4">
+          <div class="step-header">
+            <h2>Target Preferences</h2>
+            <p>What are you aiming for?</p>
+          </div>
+          <div class="form-group full">
+            <label>Target Role</label>
+            <div class="skill-chips" id="chips-roles">
+              <span class="skill-chip" data-skill="Software Engineer">Software Engineer</span>
+              <span class="skill-chip" data-skill="Data Scientist">Data Scientist</span>
+              <span class="skill-chip" data-skill="Data Analyst">Data Analyst</span>
+              <span class="skill-chip" data-skill="ML Engineer">ML Engineer</span>
+              <span class="skill-chip" data-skill="Frontend Developer">Frontend Dev</span>
+              <span class="skill-chip" data-skill="Backend Developer">Backend Dev</span>
+              <span class="skill-chip" data-skill="Full Stack Developer">Full Stack Dev</span>
+              <span class="skill-chip" data-skill="DevOps Engineer">DevOps Engineer</span>
+              <span class="skill-chip" data-skill="Product Manager">Product Manager</span>
+              <span class="skill-chip" data-skill="Business Analyst">Business Analyst</span>
+              <span class="skill-chip" data-skill="Android Developer">Android Dev</span>
+              <span class="skill-chip" data-skill="iOS Developer">iOS Dev</span>
+            </div>
+          </div>
+          <div class="form-group full">
+            <label>Preferred Company Type</label>
+            <div class="skill-chips" id="chips-company-type">
+              <span class="skill-chip" data-skill="FAANG / Big Tech">FAANG / Big Tech</span>
+              <span class="skill-chip" data-skill="Unicorn Startups">Unicorn Startups</span>
+              <span class="skill-chip" data-skill="Product Companies">Product Companies</span>
+              <span class="skill-chip" data-skill="Service Companies">Service Companies</span>
+              <span class="skill-chip" data-skill="Consulting Firms">Consulting Firms</span>
+              <span class="skill-chip" data-skill="Fintech">Fintech</span>
+              <span class="skill-chip" data-skill="Edtech">Edtech</span>
+              <span class="skill-chip" data-skill="Healthcare Tech">Healthcare Tech</span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="ctc-expectation">Expected CTC (LPA)</label>
+            <select id="ctc-expectation">
+              <option value="any">Any / No Preference</option>
+              <option value="5-10">5–10 LPA</option>
+              <option value="10-20">10–20 LPA</option>
+              <option value="20-40">20–40 LPA</option>
+              <option value="40+">40+ LPA</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="prep-time">Available Prep Time Per Day</label>
+            <select id="prep-time">
+              <option value="1">1 hour/day</option>
+              <option value="2" selected>2 hours/day</option>
+              <option value="3">3 hours/day</option>
+              <option value="4">4+ hours/day</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label for="placement-date">Expected Placement/Interview Month</label>
+            <input type="month" id="placement-date" />
+          </div>
+          <div class="form-group full">
+            <label for="additional-info">Anything Else We Should Know?</label>
+            <textarea id="additional-info" rows="3" placeholder="e.g., I have strong communication skills, I've been practicing system design for 2 months..."></textarea>
+          </div>
+
+          <div class="form-group full input-hint" id="engine-hint">
+            Powered by Google Gemini API via <code>.env</code> with automatic offline fallback.
+          </div>
+
+          <div class="btn-row">
+            <button class="btn-back-step" onclick="prevStep(3)">&#8592; Back</button>
+            <button class="btn-analyze" id="analyze-btn" onclick="startAnalysis()">
+              <span id="analyze-btn-text">Analyze My Profile</span>
+              <div class="btn-spinner hidden" id="analyze-spinner"></div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== DASHBOARD PAGE ===== -->
+  <div id="page-dashboard" class="page">
+    <div class="app-header">
+      <div class="header-left">
+        <div class="nav-logo">
+          <span class="logo-text">SkillSync <span class="logo-ai">AI</span></span>
+        </div>
+        <nav class="dash-nav">
+          <button class="dash-nav-btn active" onclick="showTab('overview')" id="tab-btn-overview">Overview</button>
+          <button class="dash-nav-btn" onclick="showTab('gaps')" id="tab-btn-gaps">Skill Gaps</button>
+          <button class="dash-nav-btn" onclick="showTab('companies')" id="tab-btn-companies">Companies</button>
+          <button class="dash-nav-btn" onclick="showTab('roadmap')" id="tab-btn-roadmap">Roadmap</button>
+        </nav>
+      </div>
+      <div class="header-right">
+        <button class="btn-secondary btn-sm" onclick="goToProfile()">Edit Profile</button>
+        <button class="btn-primary btn-sm" onclick="downloadReport()">Export Report</button>
+        <div class="user-pill-wrap" id="dash-user-pill"></div>
+      </div>
+    </div>
+
+    <div class="dashboard-body">
+      <!-- Loading overlay -->
+      <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-content">
+          <div class="loading-spinner"></div>
+          <h3 class="loading-title">Analyzing Your Profile</h3>
+          <div class="loading-steps">
+            <div class="load-step active" id="ls-1">Analyzing your profile...</div>
+            <div class="load-step" id="ls-2">Matching with companies...</div>
+            <div class="load-step" id="ls-3">Detecting skill gaps...</div>
+            <div class="load-step" id="ls-4">Generating roadmap...</div>
+            <div class="load-step" id="ls-5">Finalizing insights...</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Overview Tab -->
+      <div class="tab-content active" id="tab-content-overview">
+        <div class="overview-greeting">
+          <div>
+            <h2 id="greeting-name">Welcome back!</h2>
+            <p id="greeting-sub">Here's your placement readiness summary</p>
+          </div>
+          <div class="readiness-badge" id="readiness-badge">
+            <span id="readiness-label">Calculating...</span>
+          </div>
+        </div>
+
+        <div class="overview-grid">
+          <div class="ov-card profile-score-card">
+            <div class="ov-card-header">
+              <h3>Profile Score</h3>
+              <span class="ov-badge">Overall</span>
+            </div>
+            <div class="score-ring-wrap">
+              <svg class="score-ring" viewBox="0 0 140 140">
+                <circle cx="70" cy="70" r="58" fill="none" stroke="rgba(99,102,241,0.12)" stroke-width="12"/>
+                <circle cx="70" cy="70" r="58" fill="none" stroke="url(#scoreGrad)" stroke-width="12"
+                  stroke-dasharray="364.4" id="score-ring-fill" stroke-dashoffset="364.4" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+                <defs>
+                  <linearGradient id="scoreGrad" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#6366f1"/>
+                    <stop offset="100%" stop-color="#06b6d4"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+              <div class="score-center">
+                <span class="score-num" id="score-num">0</span>
+                <span class="score-unit">/100</span>
+              </div>
+            </div>
+            <div class="score-breakdown" id="score-breakdown"></div>
+          </div>
+
+          <div class="ov-card top-companies-card">
+            <div class="ov-card-header">
+              <h3>Top Company Matches</h3>
+              <span class="ov-badge company-badge">Profile Match</span>
+            </div>
+            <div class="top-companies-list" id="top-companies-list">
+              <div class="skeleton-row"></div>
+              <div class="skeleton-row"></div>
+              <div class="skeleton-row"></div>
+            </div>
+          </div>
+
+          <div class="ov-card ai-summary-card">
+            <div class="ov-card-header">
+              <h3>Placement Insights</h3>
+              <span class="ov-badge ai-badge" id="ai-engine-badge">Local Analysis</span>
+            </div>
+            <div class="ai-summary-text" id="ai-summary-text">
+              <div class="skeleton-row"></div>
+              <div class="skeleton-row" style="width:90%"></div>
+              <div class="skeleton-row" style="width:75%"></div>
+            </div>
+          </div>
+
+          <div class="ov-card gemini-card" id="gemini-questions-card" style="display:none;">
+            <div class="ov-card-header">
+              <h3>AI Predicted Interview Questions</h3>
+              <span class="ov-badge" style="background: rgba(99,102,241,0.18); color: #c4b5fd;">Gemini API</span>
+            </div>
+            <div id="gemini-questions-list"></div>
+          </div>
+
+          <div class="ov-card quick-actions-card">
+            <div class="ov-card-header">
+              <h3>Quick Actions</h3>
+            </div>
+            <div class="quick-actions">
+              <button class="qa-btn" onclick="showTab('gaps')">
+                <span class="qa-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                </span>
+                <span>View Skill Gaps</span>
+              </button>
+              <button class="qa-btn" onclick="showTab('companies')">
+                <span class="qa-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="9" y1="22" x2="9" y2="22.01"></line><line x1="15" y1="22" x2="15" y2="22.01"></line><line x1="9" y1="6" x2="9" y2="6.01"></line><line x1="15" y1="6" x2="15" y2="6.01"></line><line x1="9" y1="10" x2="9" y2="10.01"></line><line x1="15" y1="10" x2="15" y2="10.01"></line><line x1="9" y1="14" x2="9" y2="14.01"></line><line x1="15" y1="14" x2="15" y2="14.01"></line><line x1="9" y1="18" x2="9" y2="18.01"></line><line x1="15" y1="18" x2="15" y2="18.01"></line></svg>
+                </span>
+                <span>See Companies</span>
+              </button>
+              <button class="qa-btn" onclick="showTab('roadmap')">
+                <span class="qa-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon><line x1="8" y1="2" x2="8" y2="18"></line><line x1="16" y1="6" x2="16" y2="22"></line></svg>
+                </span>
+                <span>My Roadmap</span>
+              </button>
+              <button class="qa-btn" onclick="downloadReport()">
+                <span class="qa-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                </span>
+                <span>Download Report</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill Gaps Tab -->
+      <div class="tab-content" id="tab-content-gaps">
+        <div class="tab-page-header">
+          <h2>Skill Gap Analysis</h2>
+          <p>Areas where you need to improve to meet company benchmarks</p>
+        </div>
+        <div class="gaps-layout">
+          <div class="gaps-chart-card">
+            <h3>Skill Radar</h3>
+            <canvas id="radarChart" width="380" height="380"></canvas>
+          </div>
+          <div class="gaps-list-card">
+            <h3>Gap Breakdown</h3>
+            <div id="gaps-list"></div>
+          </div>
+        </div>
+        <div class="resources-section">
+          <h3>Recommended Resources for Your Gaps</h3>
+          <div class="resources-grid" id="resources-grid"></div>
+        </div>
+      </div>
+
+      <!-- Companies Tab -->
+      <div class="tab-content" id="tab-content-companies">
+        <div class="tab-page-header">
+          <h2>Company Recommendations</h2>
+          <p>AI-ranked companies based on your profile match</p>
+        </div>
+        <div class="companies-grid" id="companies-grid"></div>
+      </div>
+
+      <!-- Roadmap Tab -->
+      <div class="tab-content" id="tab-content-roadmap">
+        <div class="tab-page-header roadmap-page-header">
+          <div>
+            <h2>Your Preparation Roadmap</h2>
+            <p>An interactive tree &amp; flow journey crafted for your placement target</p>
+          </div>
+          <div class="roadmap-header-actions">
+            <button class="btn-secondary btn-sm" onclick="toggleAllPhases(true)">Expand All</button>
+            <button class="btn-secondary btn-sm" onclick="toggleAllPhases(false)">Collapse All</button>
+          </div>
+        </div>
+
+        <!-- Horizontal Flow Highway -->
+        <div class="roadmap-flow-ribbon" id="roadmap-flow-ribbon"></div>
+
+        <!-- Overall Task Progress Bar -->
+        <div class="roadmap-progress-card">
+          <div class="rpc-info">
+            <div class="rpc-title-wrap">
+              <span class="rpc-pulse-dot"></span>
+              <span class="rpc-label">Journey Progress</span>
+            </div>
+            <span class="rpc-stats" id="roadmap-progress-stats">0 / 0 Tasks Completed (0%)</span>
+          </div>
+          <div class="rpc-bar-track">
+            <div class="rpc-bar-fill" id="roadmap-progress-fill" style="width: 0%"></div>
+          </div>
+        </div>
+
+        <!-- Tree Spine & Branching Milestones -->
+        <div class="roadmap-tree-spine" id="roadmap-container"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== AUTH MODAL ===== -->
+  <div class="modal-backdrop hidden" id="auth-modal">
+    <div class="auth-modal-card">
+      <button class="modal-close-btn" id="auth-modal-close" aria-label="Close">&times;</button>
+      
+      <div class="auth-modal-header">
+        <div class="auth-logo-badge">
+          <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
+            <circle cx="14" cy="14" r="12" stroke="url(#authLogoGrad)" stroke-width="2.2"/>
+            <path d="M8 14 L12 10 L16 16 L20 12" stroke="url(#authLogoGrad)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="authLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#6366f1"/>
+                <stop offset="100%" stop-color="#06b6d4"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <h3 id="auth-modal-title">Create Your Student Account</h3>
+        <p id="auth-modal-sub">Create an account or sign in to start your profile analysis</p>
+      </div>
+
+      <!-- Tab Switcher: Register / Login -->
+      <div class="auth-tabs">
+        <button type="button" class="auth-tab-btn active" id="tab-register-btn">Create Account</button>
+        <button type="button" class="auth-tab-btn" id="tab-login-btn">Log In</button>
+      </div>
+
+      <!-- Alert Message Box -->
+      <div class="auth-alert hidden" id="auth-alert"></div>
+
+      <!-- Register Form (Default) -->
+      <form id="form-register" class="auth-form">
+        <div class="form-group">
+          <label for="register-name">Full Name</label>
+          <input type="text" id="register-name" placeholder="e.g. Rahul Sharma" required autocomplete="name" />
+        </div>
+        <div class="form-group">
+          <label for="register-email">Email Address</label>
+          <input type="email" id="register-email" placeholder="student@college.edu" required autocomplete="username" />
+        </div>
+        <div class="form-group">
+          <label for="register-password">Password (min 6 chars)</label>
+          <input type="password" id="register-password" placeholder="Create a password" minlength="6" required autocomplete="new-password" />
+        </div>
+        <button type="submit" class="btn-primary auth-submit-btn" id="btn-submit-register">
+          <span id="register-btn-text">Create Account &amp; Continue &#8594;</span>
+          <div class="btn-spinner hidden" id="register-spinner"></div>
+        </button>
+      </form>
+
+      <!-- Login Form -->
+      <form id="form-login" class="auth-form hidden">
+        <div class="form-group">
+          <label for="login-email">Email Address</label>
+          <input type="email" id="login-email" placeholder="student@college.edu" required autocomplete="username" />
+        </div>
+        <div class="form-group">
+          <label for="login-password">Password</label>
+          <input type="password" id="login-password" placeholder="••••••••" required autocomplete="current-password" />
+        </div>
+        <button type="submit" class="btn-primary auth-submit-btn" id="btn-submit-login">
+          <span id="login-btn-text">Log In &amp; Continue &#8594;</span>
+          <div class="btn-spinner hidden" id="login-spinner"></div>
+        </button>
+      </form>
+
+      <div class="auth-footer-note">
+        <span id="auth-switch-text" style="font-size: 0.85rem; color: var(--text-secondary);">
+          Already have an account? <a href="#" id="auth-switch-link" style="color: #818cf8; font-weight: 600; text-decoration: none;">Log In here</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

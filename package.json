@@ -1,0 +1,12 @@
+{
+  "name": "skillsync-ai",
+  "version": "1.0.0",
+  "description": "AI-Powered Campus Placement Preparation & Skill Gap Analyzer",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": ["ai", "placement", "career", "skillsync", "gemini"],
+  "license": "ISC"
+}
