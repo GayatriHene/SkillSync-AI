@@ -1,7 +1,7 @@
 # SkillSync AI
 
 ## Project Overview
-SkillSync AI is an AI-powered job recommendation and skill analysis platform designed to help users identify their skills and find suitable career opportunities based on their profiles.
+SkillSync AI is an AI-powered web-based platform designed to help users analyze their skills, identify skill gaps, and discover suitable job opportunities based on their profiles. The platform provides personalized job recommendations to support users in making informed career decisions.
 
 ## Objectives
 - Analyze users' skills and professional profiles.
