@@ -5,9 +5,10 @@ SkillSync AI is an AI-powered web-based platform designed to help users analyze 
 
 ## Objectives
 - Analyze users' skills and professional profiles.
-- Recommend suitable job opportunities.
-- Identify skill gaps between users and job requirements.
-- Help users make better career decisions.
+- Recommend relevant job opportunities based on user skills.
+- Identify skill gaps between user profiles and job requirements.
+- Provide personalized career guidance.
+- Simplify the job search and career planning process.
 
 ## Key Features
 - User profile and skill analysis.
